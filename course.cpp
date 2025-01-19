@@ -2,7 +2,6 @@
 
 Course::Course()
 {
-	this->isAvaibleCourse = false;
 }
 
 Course::Course(string, int, string, int)
@@ -55,9 +54,4 @@ string Course::getCourseTeacher()
 int Course::getCourseCode()
 {
 	return this->courseCode;
-}
-
-bool Course::getAvaibleCourse()
-{
-	return this->isAvaibleCourse;
 }

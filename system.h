@@ -1,8 +1,6 @@
 #pragma once
 #ifndef SYSTEM_H
 #define SYSTEM_H
-#include <iostream>
-#include <string>
 #include "student.h"
 #include "course.h"
 #include"schedule.h"
@@ -18,10 +16,8 @@ private:
 	Course courses[coursesCapacity];
 	Schedule schedules[scheduleCapacity];
 public:
-	System();
-	~System();
 
-	void addStudent();
+	void addStudent(string, int, string, int);
 	void addCourse(string, int, string, int);
 	void addSchedule(string, float, float, int);
 	void showStudent();

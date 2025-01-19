@@ -1,6 +1,5 @@
 #pragma once
 #include <iostream>
-#include "course.h"
 using namespace std;
 class Schedule
 {
@@ -23,6 +22,5 @@ public:
 	float getStartHour();
 	float getEndHour();
 	int getClassroom();
-	
 };
 

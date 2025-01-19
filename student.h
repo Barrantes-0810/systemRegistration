@@ -8,7 +8,6 @@ private:
 	int studentId;
 	string studentCareer;
 	int studentLevel;
-	bool withData = false;
 public:
 	Student();
 	Student(string, int ,string, int);
@@ -18,13 +17,11 @@ public:
 	void setStudentId(int);
 	void setStudentCareer(string);
 	void setStudentLevel(int);
-	void setWithData(bool);
 
 	string getStudentName();
 	int getStudentId();
 	string getStudentCareer();
 	int getStudentLevel();
-	bool getWithData();
 
 };
 

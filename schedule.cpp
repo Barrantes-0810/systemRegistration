@@ -51,4 +51,3 @@ int Schedule::getClassroom()
 {
 	return this->classroom;
 }
-

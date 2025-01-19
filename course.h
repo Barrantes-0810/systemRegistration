@@ -9,7 +9,6 @@ private:
 	int courseCredits;
 	string courseTeacher;
 	int courseCode;
-	bool isAvaibleCourse;
 	
 public:
 	Course();
@@ -24,7 +23,6 @@ public:
 	int getCourseCredits();
 	string getCourseTeacher();
 	int getCourseCode();
-	bool getAvaibleCourse();
 };
 
 

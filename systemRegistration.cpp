@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 #include "system.h"
 #include "course.h"
 #include "schedule.h"
@@ -66,8 +65,22 @@ void menu() {
 				cin >> optionThree;
 				switch (optionThree) {
 				case 1: {
+					string studentName = "";
+					int studentId = 0;
+					string studentCareer = "";
+					int studentLevel = 0;
+
+					cout << "Digite el nombre y apellido del estudiante a matricular (Sin espacios): " << endl;
+					cin >> studentName;
+					cout << "Digite el numero de identificacion del estudiante (Sin espacios): " << endl;
+					cin >> studentId;
+					cout << "Digite la carrera a la que pertenece el estudiante: " << endl;
+					cin >> studentCareer;
+					cout << "Digite el nivel academico del estudiante: " << endl;
+					cin >> studentLevel;
+
 					System SYSTEM;
-					SYSTEM.addStudent();
+					SYSTEM.addStudent(studentName, studentId, studentCareer, studentLevel);
 				}
 					  cout << endl;
 					  break;
@@ -79,13 +92,11 @@ void menu() {
 					int courseCode = 0;
 
 					cout << "Ingrese el nombre del curso: " << endl;
-					cin.ignore();
-					getline(cin, courseName);
+					cin >> courseName;
 					cout << "Ingrese la cantidad de creditos de este curso: " << endl;
 					cin >> courseCredits;
 					cout << "Ingrese el nombre del profesor que impartira el curso: " << endl;
-					cin.ignore();
-					getline(cin, courseTeacher);
+					cin >> courseTeacher;
 					cout << "ingrese el codigo de curso: " << endl;
 					cin >> courseCode;
 
@@ -130,6 +141,7 @@ void menu() {
 				switch (optionFour) {
 				case 1:
 					SYSTEM.registerCourse();
+					SYSTEM.calculateCostCredits();
 					break;
 				case 2:
 					system("pause");

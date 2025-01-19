@@ -4,33 +4,44 @@ Student::Student()
 {
 }
 
-Student::Student(string, int, string, int)
+Student::Student(string studentName, int studentId, string studentCareer, int studentLevel)
 {
+	this->studentName = studentName;
+	this->studentId = studentId;
+	this->studentCareer = studentCareer;
+	this->studentLevel = studentLevel;
 }
 
 Student::~Student()
 {
 }
 
-void Student::setStudentName(string)
+void Student::setStudentName(string newStudentName)
 {
-	this->studentName = studentName;
+	this->studentName = newStudentName;
 }
 
-void Student::setStudentId(int)
+void Student::setStudentId(int newStudentId)
 {
-	this->studentId = studentId;
+	this->studentId = newStudentId;
 }
 
-void Student::setStudentCareer(string)
+void Student::setStudentCareer(string newStudentCareer)
 {
-	this->studentCareer = studentCareer;
+	this->studentCareer = newStudentCareer;
 }
 
-void Student::setStudentLevel(int)
+void Student::setStudentLevel(int newStudentLevel)
 {
-	this->studentLevel = studentLevel;
+	this->studentLevel = newStudentLevel;
 }
+
+void Student::setWithData(bool newWithData)
+{
+	withData = newWithData;
+}
+
+
 
 string Student::getStudentName()
 {
@@ -50,4 +61,9 @@ string Student::getStudentCareer()
 int Student::getStudentLevel()
 {
 	return this->studentLevel;
+}
+
+bool Student::getWithData()
+{
+	return withData;
 }
